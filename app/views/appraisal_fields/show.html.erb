@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @appraisal_field.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @appraisal_field.type %>
+</p>
+
+<p>
+  <strong>Hint:</strong>
+  <%= @appraisal_field.hint %>
+</p>
+
+<%= link_to 'Edit', edit_appraisal_field_path(@appraisal_field) %> |
+<%= link_to 'Back', appraisal_fields_path %>

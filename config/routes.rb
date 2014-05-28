@@ -1,4 +1,22 @@
 Sejahi::Application.routes.draw do
+  resources :students
+
+  resources :appraisal_field_types
+
+  resources :appraisal_field_data
+
+  resources :appraisals
+
+  resources :appraisal_fields
+
+  resources :appraisal_models
+
+  resources :chats
+
+  resources :schools
+
+  resources :talks
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

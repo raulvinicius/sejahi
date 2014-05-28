@@ -1,0 +1,29 @@
+<h1>Listing appraisal_field_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Html</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appraisal_field_types.each do |appraisal_field_type| %>
+      <tr>
+        <td><%= appraisal_field_type.name %></td>
+        <td><%= appraisal_field_type.html %></td>
+        <td><%= link_to 'Show', appraisal_field_type %></td>
+        <td><%= link_to 'Edit', edit_appraisal_field_type_path(appraisal_field_type) %></td>
+        <td><%= link_to 'Destroy', appraisal_field_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appraisal field type', new_appraisal_field_type_path %>

@@ -1,0 +1,27 @@
+<h1>Listing appraisal_models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appraisal_models.each do |appraisal_model| %>
+      <tr>
+        <td><%= appraisal_model.name %></td>
+        <td><%= link_to 'Show', appraisal_model %></td>
+        <td><%= link_to 'Edit', edit_appraisal_model_path(appraisal_model) %></td>
+        <td><%= link_to 'Destroy', appraisal_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appraisal model', new_appraisal_model_path %>

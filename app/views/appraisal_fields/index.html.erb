@@ -1,0 +1,30 @@
+<h1>Listing appraisal_fields</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+<!--       <th>Type</th>
+ -->      <th>Hint</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appraisal_fields.each do |appraisal_field| %>
+      <tr>
+        <td><%= appraisal_field.name %></td>
+        <td><%= appraisal_field.hint %></td>
+        <td><%= link_to 'Show', appraisal_field %></td>
+        <td><%= link_to 'Edit', edit_appraisal_field_path(appraisal_field) %></td>
+        <td><%= link_to 'Destroy', appraisal_field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appraisal field', new_appraisal_field_path %>

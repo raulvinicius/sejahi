@@ -1,0 +1,2 @@
+module AppraisalModelsHelper
+end
