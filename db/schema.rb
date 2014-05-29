@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528214416) do
+ActiveRecord::Schema.define(version: 20140529002037) do
 
   create_table "appraisal_field_data", force: true do |t|
     t.string   "data"
@@ -56,6 +56,11 @@ ActiveRecord::Schema.define(version: 20140528214416) do
     t.datetime "updated_at"
     t.integer  "talk_id"
     t.integer  "school_id"
+  end
+
+  create_table "chats_students", id: false, force: true do |t|
+    t.integer "chat_id"
+    t.integer "student_id"
   end
 
   create_table "schools", force: true do |t|

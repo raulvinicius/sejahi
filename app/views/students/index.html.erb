@@ -9,6 +9,7 @@
       <th>Email</th>
       <th>Birthday</th>
       <th>Region</th>
+      <th>Chats</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,6 +25,17 @@
         <td><%= student.email %></td>
         <td><%= student.birthday %></td>
         <td><%= student.region %></td>
+        <td>
+
+           <% student.chats.each do |s| %>
+            <ul>
+              <li>
+                <%= "#{s.talk.name}" %>
+              </li>
+            </ul>
+          <% end %> 
+
+        </td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

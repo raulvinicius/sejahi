@@ -20,5 +20,16 @@
   <%= @chat.school.name %>
 </p>
 
+<p>
+  <strong>Students:</strong>
+  <% @chat.students.each do |s| %>
+   <ul>
+     <li>
+       <%= "#{s.firstname} #{s.lastname} | #{s.email}" %>
+     </li>
+   </ul>
+ <% end %> 
+</p>
+
 <%= link_to 'Edit', edit_chat_path(@chat) %> |
 <%= link_to 'Back', chats_path %>

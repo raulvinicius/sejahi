@@ -3,5 +3,6 @@
     <%= f.datetime_select :date %>
     <%= f.association :talk %>
     <%= f.association :school %>
+    <%= f.association :students, as: :check_boxes %>
     <%= f.submit %>
 <% end %>
