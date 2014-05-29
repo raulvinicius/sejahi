@@ -1,6 +1,8 @@
 class ChatsController < ApplicationController
   before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /chats
   # GET /chats.json
   def index
@@ -69,6 +71,6 @@ class ChatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chat_params
-      params.require(:chat).permit(:name, :date)
+      params.require(:chat).permit(:name, :date, :talk_id, :school_id)
     end
 end

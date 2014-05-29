@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140528190545) do
+ActiveRecord::Schema.define(version: 20140528214416) do
 
   create_table "appraisal_field_data", force: true do |t|
     t.string   "data"
@@ -31,7 +31,8 @@ ActiveRecord::Schema.define(version: 20140528190545) do
     t.string   "hint"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "appraisalFieldTypeId"
+    t.integer  "appraisal_model_id"
+    t.integer  "appraisal_field_type_id"
   end
 
   create_table "appraisal_models", force: true do |t|
@@ -43,6 +44,9 @@ ActiveRecord::Schema.define(version: 20140528190545) do
   create_table "appraisals", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "chat_id"
+    t.integer  "appraisal_model_id"
+    t.integer  "student_id"
   end
 
   create_table "chats", force: true do |t|
@@ -50,10 +54,23 @@ ActiveRecord::Schema.define(version: 20140528190545) do
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "talk_id"
+    t.integer  "school_id"
   end
 
   create_table "schools", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "students", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "nick"
+    t.string   "email"
+    t.date     "birthday"
+    t.string   "region"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -10,5 +10,15 @@
   <%= @chat.date %>
 </p>
 
+<p>
+  <strong>Talk:</strong>
+  <%= @chat.talk.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @chat.school.name %>
+</p>
+
 <%= link_to 'Edit', edit_chat_path(@chat) %> |
 <%= link_to 'Back', chats_path %>

@@ -52,3 +52,5 @@ gem 'rails_12factor'
 gem 'thin'
 
 gem 'devise'
+
+gem 'simple_form'

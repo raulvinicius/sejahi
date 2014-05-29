@@ -5,6 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Date</th>
+      <th>School</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,8 +15,9 @@
   <tbody>
     <% @chats.each do |chat| %>
       <tr>
-        <td><%= chat.name %></td>
+        <td><%= chat.talk.name %></td>
         <td><%= chat.date %></td>
+        <td><%= chat.school.name %></td>
         <td><%= link_to 'Show', chat %></td>
         <td><%= link_to 'Edit', edit_chat_path(chat) %></td>
         <td><%= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
